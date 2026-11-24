@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yeni başlayanlar için HTML/CSS: ilk adımlar | Mehmet Annac Blog</title>
+<meta name="description" content="Bir web sayfasının iskeleti, stili ve mobil uyumu: ilk haftalarda öğrendiğim temel kavramlar.">
+<meta name="author" content="Mehmet Annac">
+<meta name="theme-color" content="#06080f">
+<link rel="canonical" href="https://mehmettannac.github.io/blog-html-css-ilk-adimlar.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yeni başlayanlar için HTML/CSS: ilk adımlar | Mehmet Annac Blog">
+<meta property="og:description" content="Bir web sayfasının iskeleti, stili ve mobil uyumu: ilk haftalarda öğrendiğim temel kavramlar.">
+<meta property="og:url" content="https://mehmettannac.github.io/blog-html-css-ilk-adimlar.html">
+<meta property="og:image" content="https://mehmettannac.github.io/assets/img/mehmet-hero.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body data-title-tr="Yeni başlayanlar için HTML/CSS: ilk adımlar | Mehmet Annac Blog" data-title-en="HTML/CSS for beginners: first steps | Mehmet Annac Blog" data-desc-tr="Bir web sayfasının iskeleti, stili ve mobil uyumu: ilk haftalarda öğrendiğim temel kavramlar." data-desc-en="Structure, style and responsiveness of a web page: the basics I learned in my first weeks.">
+<div class="loader" aria-hidden="true"><div>
+<svg viewBox="0 0 240 90"><rect x="2" y="2" width="236" height="86" rx="6"/><path d="M20 70 L20 20 L50 50 L80 20 L80 70 M110 70 L135 20 L160 70 M118 54 L152 54 M190 20 L190 70 M190 20 L220 20"/><line x1="20" y1="80" x2="220" y2="80"/></svg>
+<div class="loader-text">BLUEPRINT × NIGHT RIDE</div></div></div>
+<div class="progress"></div>
+<header class="nav">
+  <a class="logo" href="index.html" aria-label="Mehmet Annac — Anasayfa"><span class="logo-mark">MA</span><span>MEHMET.ANNAC</span></a>
+  <nav aria-label="Ana menü"><ul class="nav-links"><li><a href="index.html"><span lang="tr">Anasayfa</span><span lang="en">Home</span></a></li><li><a href="hakkimda.html"><span lang="tr">Hakkımda</span><span lang="en">About</span></a></li><li><a href="projeler.html"><span lang="tr">Projeler</span><span lang="en">Projects</span></a></li><li><a href="blog.html" aria-current="page"><span lang="tr">Blog</span><span lang="en">Blog</span></a></li><li><a href="galeri.html"><span lang="tr">Galeri</span><span lang="en">Gallery</span></a></li><li><a href="iletisim.html"><span lang="tr">İletişim</span><span lang="en">Contact</span></a></li></ul></nav>
+  <div class="nav-right">
+    <button class="lang-toggle" type="button" aria-label="Dil değiştir / Change language"><span lang="tr"><b>TR</b> / EN</span><span lang="en">TR / <b>EN</b></span></button>
+    <button class="menu-btn" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="ghost" aria-hidden="true" data-speed="0.25">BLOG</div><div class="wrap" style="max-width:860px">
+  <p class="eyebrow reveal"><a href="blog.html" style="text-decoration:none">← Blog</a> · <span lang="tr">Web</span><span lang="en">Web</span></p>
+  <h1 class="reveal" style="font-size:clamp(2.2rem,6vw,4.2rem);text-transform:none"><span lang="tr">Yeni başlayanlar için HTML/CSS: ilk adımlar</span><span lang="en">HTML/CSS for beginners: first steps</span></h1>
+  <p class="lead reveal"><span lang="tr">Bir web sayfasının iskeleti, stili ve mobil uyumu: ilk haftalarda öğrendiğim temel kavramlar.</span><span lang="en">Structure, style and responsiveness of a web page: the basics I learned in my first weeks.</span></p>
+  <div class="dim-line reveal"><span>Mehmet Annac</span><i></i><span><span lang="tr">~4 dk</span><span lang="en">~4 min</span></span></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap"><article class="post reveal"><div lang="tr">
+<p>Web tasarımına yeni başladım. Bu yazıda ilk haftalarda öğrendiğim temel kavramları, kendime not alır gibi topladım. Siz de yeni başlıyorsanız işinize yarayabilir.</p>
+<h2>HTML: sayfanın iskeleti</h2>
+<p><abbr title="HyperText Markup Language">HTML</abbr>, sayfada <em>ne</em> olduğunu söyler: başlık, paragraf, resim, liste, tablo. En önemli fark ettiğim şey, doğru etiketi seçmenin hem erişilebilirlik hem de SEO için önemli olması.</p>
+<pre><code>&lt;header&gt;...&lt;/header&gt;
+&lt;main&gt;
+  &lt;h1&gt;Mehmet Annac&lt;/h1&gt;
+  &lt;p&gt;Bilgisayar Programcılığı öğrencisi&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+<h2>CSS: sayfanın görünüşü</h2>
+<p><abbr title="Cascading Style Sheets">CSS</abbr>, o içeriğin <em>nasıl görüneceğini</em> belirler. Renkleri tek bir yerde tutmak için CSS değişkenlerini kullanmak en sevdiğim özellik oldu:</p>
+<pre><code>:root {
+  --neon: #ff2e63;
+  --cyan: #4cc9f0;
+}
+h1 em { color: var(--neon); }</code></pre>
+<figure><img src="assets/img/blog/html-css.png" alt="Hakkımda sayfasındaki ders programı tablosu: HTML'de table, CSS'te tasarım." loading="lazy"><figcaption>Hakkımda sayfasındaki ders programı tablosu: HTML'de table, CSS'te tasarım.</figcaption></figure>
+<h2>Mobil öncelikli (mobile-first) düşünmek</h2>
+<p>Sitelerin çoğu artık telefondan açılıyor. Bu yüzden önce küçük ekrana göre tasarlayıp, büyük ekranlar için <code>@media</code> sorgularıyla genişletmek daha mantıklı. Bu sitede de menü telefonda tam ekran açılıyor, kartlar tek sütuna iniyor.</p>
+<h2>Öğrenirken kendime koyduğum kurallar</h2>
+<ol>
+<li>Önce yapıyı (HTML), sonra görünüşü (CSS), en son etkileşimi (JavaScript) düşün.</li>
+<li>Her sayfaya ayrı bir <code>&lt;title&gt;</code> ve açıklama yaz.</li>
+<li>Tarayıcının geliştirici araçlarını (F12) sürekli açık tut.</li>
+<li>Beğendiğin sitelere bak, ama kopyalama: neden güzel olduğunu anlamaya çalış.</li>
+</ol>
+</div><div lang="en">
+<p>I've just started web design. In this post I collected the basics I learned in my first weeks, like notes to myself. If you're starting out too, they might help.</p>
+<h2>HTML: the skeleton of the page</h2>
+<p><abbr title="HyperText Markup Language">HTML</abbr> says <em>what</em> is on the page: headings, paragraphs, images, lists, tables. The biggest thing I noticed is that choosing the right tag matters for both accessibility and SEO.</p>
+<pre><code>&lt;header&gt;...&lt;/header&gt;
+&lt;main&gt;
+  &lt;h1&gt;Mehmet Annac&lt;/h1&gt;
+  &lt;p&gt;Computer Programming student&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+<h2>CSS: how the page looks</h2>
+<p><abbr title="Cascading Style Sheets">CSS</abbr> decides <em>how</em> that content looks. Using CSS variables to keep colours in one place became my favourite feature:</p>
+<pre><code>:root {
+  --neon: #ff2e63;
+  --cyan: #4cc9f0;
+}
+h1 em { color: var(--neon); }</code></pre>
+<figure><img src="assets/img/blog/html-css.png" alt="The timetable on my About page: a table in HTML, styled with CSS." loading="lazy"><figcaption>The timetable on my About page: a table in HTML, styled with CSS.</figcaption></figure>
+<h2>Thinking mobile-first</h2>
+<p>Most sites are opened on phones now. So it makes sense to design for small screens first and expand for larger ones with <code>@media</code> queries. On this site the menu opens full-screen on phones and cards drop to one column.</p>
+<h2>Rules I set for myself while learning</h2>
+<ol>
+<li>Think about structure (HTML) first, then looks (CSS), then interaction (JavaScript).</li>
+<li>Give every page its own <code>&lt;title&gt;</code> and description.</li>
+<li>Keep the browser's developer tools (F12) open all the time.</li>
+<li>Look at sites you like, but don't copy them: try to understand why they work.</li>
+</ol>
+</div>
+<div class="post-nav"><a class="btn ghost" href="blog-yapay-zeka-ile-site.html"><span lang="tr">Yapay zekâ ile web sitesi yapmak: bu siteyi nasıl kurdum?</span><span lang="en">Building a website with AI: how I made this site</span> <span class="arrow">→</span></a><a class="btn ghost" href="blog-restorasyondan-yazilima.html"><span lang="tr">Mimari restorasyondan yazılıma: neden geçtim?</span><span lang="en">From architectural restoration to software: why I switched</span> <span class="arrow">→</span></a></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="eyebrow"><span lang="tr">Bir proje mi var?</span><span lang="en">Got a project?</span></p>
+    <a class="foot-big" href="iletisim.html"><span lang="tr">Hadi <span>konuşalım</span> →</span><span lang="en">Let's <span>talk</span> →</span></a>
+    <div class="foot-row">
+      <span>© <span data-year>2026</span> Mehmet Annac · Akdeniz Üniversitesi · Antalya</span>
+      <div class="socials"><a href="https://www.instagram.com/mehmettannac/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://github.com/mehmettannac" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a><a href="https://www.linkedin.com/in/mehmet-anna%C3%A7-2894b5441" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.05c.53-1 1.84-2.05 3.78-2.05 4.05 0 4.8 2.66 4.8 6.12v5.43h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9H10v-11Z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
