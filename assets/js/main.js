@@ -127,6 +127,27 @@
     });
   }
 
+  /* ---------- Arka plan müziği (YouTube oynatıcı) ----------
+     Tarayıcılar sesli otomatik oynatmayı engeller; müzik bir tıklamayla başlar.
+     Tercih hatırlanır: açık bırakıldıysa sonraki sayfada da açılmayı dener. */
+  const music = document.querySelector('.music');
+  if (music) {
+    const btn = music.querySelector('.music-btn'), box = music.querySelector('.music-player');
+    const id = music.dataset.yt;
+    const start = () => {
+      box.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&loop=1&playlist=${id}&controls=1&rel=0" title="AC/DC — Thunderstruck" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      music.classList.add('on'); btn.setAttribute('aria-pressed', 'true');
+      try { localStorage.setItem('music', 'on'); } catch (e) {}
+    };
+    const stop = () => {
+      box.innerHTML = ''; music.classList.remove('on'); btn.setAttribute('aria-pressed', 'false');
+      try { localStorage.setItem('music', 'off'); } catch (e) {}
+    };
+    btn.addEventListener('click', () => music.classList.contains('on') ? stop() : start());
+    let pref = null; try { pref = localStorage.getItem('music'); } catch (e) {}
+    if (pref === 'on') start();
+  }
+
   /* ---------- Yıl ---------- */
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 })();
