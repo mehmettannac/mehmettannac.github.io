@@ -6,6 +6,6 @@
 - [Anasayfa / Home](https://mehmettannac.github.io/): Kısa tanıtım, seçili projeler ve galeri
 - [Hakkımda / About](https://mehmettannac.github.io/hakkimda.html): Özgeçmiş, yetenekler (AutoCAD %75, Django %65, Python %60, İngilizce B2, HTML/CSS %45, Photoshop %40), ilgi alanları, ders programı
 - [Projeler / Projects](https://mehmettannac.github.io/projeler.html): Grafik Animasyon 1 dersi Photoshop projeleri
-- [Blog](https://mehmettannac.github.io/blog.html): Yapay zekâ ile site yapmak, restorasyondan yazılıma, HTML/CSS
+- [Blog](https://mehmettannac.github.io/blog.html): Yapay zekâ ile site yapmak, restorasyondan yazılıma, HTML/CSS, Canvas oyunu, Python, Django
 - [Galeri / Gallery](https://mehmettannac.github.io/galeri.html): Fotoğraflar
 - [İletişim / Contact](https://mehmettannac.github.io/iletisim.html): Antalya, iletişim formu

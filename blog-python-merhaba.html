@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python'a merhaba: neden ilk dilim olarak seviyorum? | Mehmet Annac Blog</title>
+<meta name="description" content="Okunabilir sözdizimi, güçlü kütüphaneler ve Django'ya açılan kapı: Python'u neden sevdiğimi küçük örneklerle anlatıyorum.">
+<meta name="author" content="Mehmet Annac">
+<meta name="theme-color" content="#06080f">
+<link rel="canonical" href="https://mehmettannac.github.io/blog-python-merhaba.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Python'a merhaba: neden ilk dilim olarak seviyorum? | Mehmet Annac Blog">
+<meta property="og:description" content="Okunabilir sözdizimi, güçlü kütüphaneler ve Django'ya açılan kapı: Python'u neden sevdiğimi küçük örneklerle anlatıyorum.">
+<meta property="og:url" content="https://mehmettannac.github.io/blog-python-merhaba.html">
+<meta property="og:image" content="https://mehmettannac.github.io/assets/img/mehmet-hero.jpg">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body data-title-tr="Python'a merhaba: neden ilk dilim olarak seviyorum? | Mehmet Annac Blog" data-title-en="Hello Python: why I love it as my first language | Mehmet Annac Blog" data-desc-tr="Okunabilir sözdizimi, güçlü kütüphaneler ve Django'ya açılan kapı: Python'u neden sevdiğimi küçük örneklerle anlatıyorum." data-desc-en="Readable syntax, powerful libraries and a door to Django: why I love Python, with small examples.">
+<div class="loader" aria-hidden="true"><div>
+<svg viewBox="0 0 240 90"><rect x="2" y="2" width="236" height="86" rx="6"/><path d="M20 70 L20 20 L50 50 L80 20 L80 70 M110 70 L135 20 L160 70 M118 54 L152 54 M190 20 L190 70 M190 20 L220 20"/><line x1="20" y1="80" x2="220" y2="80"/></svg>
+<div class="loader-text">BLUEPRINT × NIGHT RIDE</div></div></div>
+<div class="progress"></div>
+<header class="nav">
+  <a class="logo" href="index.html" aria-label="Mehmet Annac — Anasayfa"><span class="logo-mark">MA</span><span>MEHMET.ANNAC</span></a>
+  <nav aria-label="Ana menü"><ul class="nav-links"><li><a href="index.html"><span lang="tr">Anasayfa</span><span lang="en">Home</span></a></li><li><a href="hakkimda.html"><span lang="tr">Hakkımda</span><span lang="en">About</span></a></li><li><a href="projeler.html"><span lang="tr">Projeler</span><span lang="en">Projects</span></a></li><li><a href="blog.html" aria-current="page"><span lang="tr">Blog</span><span lang="en">Blog</span></a></li><li><a href="galeri.html"><span lang="tr">Galeri</span><span lang="en">Gallery</span></a></li><li><a href="iletisim.html"><span lang="tr">İletişim</span><span lang="en">Contact</span></a></li></ul></nav>
+  <div class="nav-right">
+    <button class="lang-toggle" type="button" aria-label="Dil değiştir / Change language"><span lang="tr"><b>TR</b> / EN</span><span lang="en">TR / <b>EN</b></span></button>
+    <button class="menu-btn" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+<main>
+<section class="page-hero"><div class="ghost" aria-hidden="true" data-speed="0.25">BLOG</div><div class="wrap" style="max-width:860px">
+  <p class="eyebrow reveal"><a href="blog.html" style="text-decoration:none">← Blog</a> · <span lang="tr">Python</span><span lang="en">Python</span></p>
+  <h1 class="reveal" style="font-size:clamp(2.2rem,6vw,4.2rem);text-transform:none"><span lang="tr">Python'a merhaba: neden ilk dilim olarak seviyorum?</span><span lang="en">Hello Python: why I love it as my first language</span></h1>
+  <p class="lead reveal"><span lang="tr">Okunabilir sözdizimi, güçlü kütüphaneler ve Django'ya açılan kapı: Python'u neden sevdiğimi küçük örneklerle anlatıyorum.</span><span lang="en">Readable syntax, powerful libraries and a door to Django: why I love Python, with small examples.</span></p>
+  <div class="dim-line reveal"><span>Mehmet Annac</span><i></i><span><span lang="tr">~4 dk</span><span lang="en">~4 min</span></span></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap"><article class="post reveal"><div lang="tr">
+<p>Bilgisayar Programcılığı'nda en sevdiğim dil şu an Python. İlk bakışta neredeyse İngilizce bir cümle gibi okunuyor; bu da yeni başlayan biri için büyük bir avantaj.</p>
+<h2>Okunur kod</h2>
+<p>Küçük bir örnek: ders programımdaki bazı derslerin haftalık saatlerini topluyorum.</p>
+<pre><code>dersler = {
+    "Programlamanın Temelleri": 4,
+    "Veri Tabanı I": 4,
+    "Grafik Animasyon I": 4,
+    "Web Tasarımının Temelleri": 2,
+}
+toplam = sum(dersler.values())
+print(f"Bu derslerde haftada {toplam} saat geçiriyorum.")</code></pre>
+<figure><img src="assets/img/blog/python.png" alt="Kodun çalıştırılmış hali: sözlük, sum() ve f-string." loading="lazy"><figcaption>Kodun çalıştırılmış hali: sözlük, sum() ve f-string.</figcaption></figure>
+<p>Süslü parantez yok, noktalı virgül yok. Girintiler zorunlu olduğu için kod kendiliğinden düzenli duruyor; teknik çizimdeki katman düzeni gibi.</p>
+<h2>Tek satırda liste: list comprehension</h2>
+<p>4 saatten uzun süren dersleri ayıklamak için tek satır yetiyor:</p>
+<pre><code>uzun = [ad for ad, saat in dersler.items() if saat &gt;= 4]</code></pre>
+<h2>Neden Python?</h2>
+<ul>
+<li><strong>Öğrenmesi kolay:</strong> sözdizimi sade, hata mesajları anlaşılır.</li>
+<li><strong>Her yerde:</strong> web, veri analizi, otomasyon ve yapay zekâ projelerinde kullanılıyor.</li>
+<li><strong>Django'ya kapı:</strong> web uygulaması yazmak istediğimde aynı dili kullanmaya devam edebiliyorum.</li>
+</ul>
+<p>Django tarafını bir sonraki yazıda anlattım: <a href="blog-django-mimari.html">Django'yu bir mimar gibi düşünmek →</a></p>
+</div><div lang="en">
+<p>Right now my favourite language in Computer Programming is Python. At first glance it reads almost like an English sentence, which is a big advantage for a beginner.</p>
+<h2>Readable code</h2>
+<p>A small example: adding up the weekly hours of some courses in my timetable.</p>
+<pre><code>dersler = {
+    "Programlamanın Temelleri": 4,
+    "Veri Tabanı I": 4,
+    "Grafik Animasyon I": 4,
+    "Web Tasarımının Temelleri": 2,
+}
+toplam = sum(dersler.values())
+print(f"Bu derslerde haftada {toplam} saat geçiriyorum.")</code></pre>
+<figure><img src="assets/img/blog/python.png" alt="The code running: a dictionary, sum() and an f-string." loading="lazy"><figcaption>The code running: a dictionary, sum() and an f-string.</figcaption></figure>
+<p>No curly braces, no semicolons. Indentation is required, so the code stays tidy on its own — like the layer order in a technical drawing.</p>
+<h2>A list in one line: list comprehension</h2>
+<p>Filtering the courses that take 4 hours or more needs just one line:</p>
+<pre><code>uzun = [ad for ad, saat in dersler.items() if saat &gt;= 4]</code></pre>
+<h2>Why Python?</h2>
+<ul>
+<li><strong>Easy to learn:</strong> simple syntax and readable error messages.</li>
+<li><strong>Everywhere:</strong> used in web, data analysis, automation and AI projects.</li>
+<li><strong>A door to Django:</strong> when I want to build a web app, I can keep using the same language.</li>
+</ul>
+<p>I cover Django in the next post: <a href="blog-django-mimari.html">Thinking about Django like an architect →</a></p>
+</div>
+<div class="post-nav"><a class="btn ghost" href="blog-yapay-zeka-ile-site.html"><span lang="tr">Yapay zekâ ile web sitesi yapmak: bu siteyi nasıl kurdum?</span><span lang="en">Building a website with AI: how I made this site</span> <span class="arrow">→</span></a><a class="btn ghost" href="blog-restorasyondan-yazilima.html"><span lang="tr">Mimari restorasyondan yazılıma: neden geçtim?</span><span lang="en">From architectural restoration to software: why I switched</span> <span class="arrow">→</span></a><a class="btn ghost" href="blog-html-css-ilk-adimlar.html"><span lang="tr">Yeni başlayanlar için HTML/CSS: ilk adımlar</span><span lang="en">HTML/CSS for beginners: first steps</span> <span class="arrow">→</span></a><a class="btn ghost" href="blog-canvas-oyun.html"><span lang="tr">Siteme oyun ekledim: Canvas ile Bug Runner</span><span lang="en">I added a game to my site: Bug Runner with Canvas</span> <span class="arrow">→</span></a><a class="btn ghost" href="blog-django-mimari.html"><span lang="tr">Django'yu bir mimar gibi düşünmek: MVT yapısı</span><span lang="en">Thinking about Django like an architect: the MVT pattern</span> <span class="arrow">→</span></a></div></article></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="eyebrow"><span lang="tr">Bir proje mi var?</span><span lang="en">Got a project?</span></p>
+    <a class="foot-big" href="iletisim.html"><span lang="tr">Hadi <span>konuşalım</span> →</span><span lang="en">Let's <span>talk</span> →</span></a>
+    <div class="foot-row">
+      <span>© <span data-year>2026</span> Mehmet Annac · Akdeniz Üniversitesi · Antalya</span>
+      <div class="socials"><a href="https://www.instagram.com/mehmettannac/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://github.com/mehmettannac" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a><a href="https://www.linkedin.com/in/mehmet-anna%C3%A7-2894b5441" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm7 0h3.8v1.5h.05c.53-1 1.84-2.05 3.78-2.05 4.05 0 4.8 2.66 4.8 6.12v5.43h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9H10v-11Z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+<div class="music" data-yt="v2AC41dglnM">
+  <button class="music-btn" type="button" aria-pressed="false" aria-label="Müziği aç / kapat">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music-txt"><small><span lang="tr">MÜZİK</span><span lang="en">MUSIC</span></small>Thunderstruck — AC/DC</span>
+  </button>
+  <div class="music-player"></div>
+</div>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

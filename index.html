@@ -88,6 +88,15 @@
 </div>
 </section>
 
+
+<section>
+<div class="wrap">
+  <p class="eyebrow reveal"><span lang="tr">Tanıtım videosu</span><span lang="en">Intro video</span></p>
+  <h2 class="title reveal"><span lang="tr">Siteyi <em>1 dakikada</em> gez</span><span lang="en">Tour the site in <em>1 minute</em></span></h2>
+  <div class="video-frame reveal"><iframe src="https://www.youtube-nocookie.com/embed/3PC9a5L7Cdo?rel=0" title="Mehmet Annac — Kişisel Web Sitesi Tanıtımı" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+  <div class="cta-row reveal"><a class="btn ghost" href="https://youtu.be/3PC9a5L7Cdo" target="_blank" rel="noopener"><span lang="tr">YouTube'da izle</span><span lang="en">Watch on YouTube</span> <span class="arrow">↗</span></a></div>
+</div>
+</section>
 <section>
 <div class="wrap">
   <p class="eyebrow reveal"><span lang="tr">Seçili işler</span><span lang="en">Selected work</span></p>
@@ -121,6 +130,36 @@
 </div>
 </section>
 
+
+<section id="oyun">
+<div class="wrap">
+  <p class="eyebrow reveal"><span lang="tr">Mola ver</span><span lang="en">Take a break</span></p>
+  <h2 class="title reveal">Bug <em>Runner</em></h2>
+  <p lang="tr" class="lead reveal">Kurye motoruyla gece yolunda bug'ların, 404'lerin ve NaN bloklarının üzerinden atla. Skorunu ismini yazarak kaydet ve sıralamaya gir.</p><p lang="en" class="lead reveal">Ride the courier bike down the night road and jump over bugs, 404s and NaN blocks. Save your score with your name and climb the leaderboard.</p>
+  <div class="game-wrap reveal" style="margin-top:26px">
+    <div class="game-box">
+      <canvas id="game" width="960" height="300" aria-label="Bug Runner oyunu"></canvas>
+      <div class="game-over" role="dialog" aria-label="Oyun bitti">
+        <div class="go-card">
+          <div class="big"><span lang="tr">Skorun</span><span lang="en">Your score</span>: <b id="final-score">0</b></div>
+          <div class="go-row">
+            <input id="player-name" maxlength="16" autocomplete="nickname" data-ph-tr="İsmin" data-ph-en="Your name" placeholder="İsmin">
+            <button class="btn" id="save-score" type="button"><span lang="tr">Kaydet</span><span lang="en">Save</span></button>
+          </div>
+          <p class="save-note" aria-live="polite"></p>
+          <button class="retry" id="retry" type="button"><span lang="tr">↻ Tekrar oyna</span><span lang="en">↻ Play again</span></button>
+        </div>
+      </div>
+      <div class="game-hint"><span><kbd>SPACE</kbd> / <kbd>↑</kbd> <span lang="tr">zıpla</span><span lang="en">jump</span></span><span><kbd>↓</kbd> <span lang="tr">eğil</span><span lang="en">duck</span></span><span><span lang="tr">Telefonda: ekrana dokun</span><span lang="en">On mobile: tap the screen</span></span></div>
+    </div>
+    <aside class="board" aria-label="Sıralama">
+      <h3><span lang="tr">Sıralama</span><span lang="en">Leaderboard</span></h3>
+      <div class="board-mode"></div>
+      <ol id="leaderboard"></ol>
+    </aside>
+  </div>
+</div>
+</section>
 <section>
 <div class="wrap">
   <p class="eyebrow reveal"><span lang="tr">Galeriden</span><span lang="en">From the gallery</span></p>
@@ -148,5 +187,6 @@
   <div class="music-player"></div>
 </div>
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/game.js" defer></script>
 </body>
 </html>
